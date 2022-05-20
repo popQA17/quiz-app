@@ -22,7 +22,6 @@ export default function Home() {
     setSelectedOptions([...selectedOptions]);
     console.log(selectedOptions);
   };
-
   const handlePrevious = () => {
     setQuestionAnimate(true)
     setTimeout(()=>{
