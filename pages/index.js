@@ -100,12 +100,6 @@ export default function Home() {
     hidden: { opacity: 0, y: 200 },
     show: { opacity: 1, y: 0 }
   }
-  useEffect(()=>{
-    if (!router.isReady) return;
-    if(router.query.token != 'projACEaffilate'){
-      window.location.href='https://ace.popplays.tk'
-    }
-  }, [router.isReady])
   return (
     <>
 
