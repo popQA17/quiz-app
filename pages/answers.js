@@ -43,11 +43,11 @@ export default function Answers(){
                 </>
             )
         })}
-        <button onClick={()=> router.push('/')} className='mx-4 mt-10 w-44 bg-indigo-600 py-3 px-4 rounded-lg text-white'>
+        <button onClick={()=> router.push('/') } className='mx-4 mt-10 w-44 bg-indigo-600 py-3 px-4 rounded-lg text-white'>
             Retry Quiz
         </button>
 
-        <button onClick={()=> window.location.href = 'https://projace.popplays.tk'} className='mx-4 mt-10 w-44 bg-gray-700 py-3 px-4 rounded-lg text-white'>
+        <button onClick={()=> window.location.href = 'https://ace.popplays.tk'} className='mx-4 mt-10 w-44 bg-gray-700 py-3 px-4 rounded-lg text-white'>
             Return to site
         </button>
         </div>

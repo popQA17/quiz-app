@@ -1,42 +1,42 @@
 [
   {
-    "question": "What type of framework is Next.js?",
+    "question": "Who invented Paper?",
     "answerOptions": [
-      { "answer": "Frontend" },
-      { "answer": "Backend" },
-      { "answer": "FullStack", "isCorrect": true },
+      { "answer": "Cai Lun", "isCorrect": true  },
+      { "answer": "Zhang He" },
+      { "answer": "Su Song"},
       { "answer": "None of the above" }
     ]
   },
   {
-    "question": "When was Next.js released?",
+    "question": "In which dynasty was printing invented?",
     "answerOptions": [
-      { "answer": "20 September 2019" },
-      { "answer": "14 January 2017" },
-      { "answer": "25 October 2016", "isCorrect": true },
-      { "answer": "28 March 2018" }
+      { "answer": "Ming Dynasty" },
+      { "answer": "Qin Dynasty" },
+      { "answer": "Han Dynasty"},
+      { "answer": "None of the above", "isCorrect": true  }
     ]
   },
   {
-    "question": "Which CSS Framework are we using?",
+    "question": "What is an example of an item made with Gunpowder?",
     "answerOptions": [
-      { "answer": "Bootstrap" },
-      { "answer": "TailwindCSS", "isCorrect": true },
-      { "answer": "Chakra UI" },
-      { "answer": "Bulma CSS" }
+      { "answer": "Fireworks", "isCorrect": true  },
+      { "answer": "Paper"},
+      { "answer": "Compass" },
+      { "answer": "Block of wood" }
     ]
   },
   {
-    "question": "Which class in Tailwind is used to set flex direction of column?",
+    "question": "What was the compass made for in Ancient China?",
     "answerOptions": [
-      { "answer": "col" },
-      { "answer": "col-flex" },
-      { "answer": "flex-col", "isCorrect": true },
-      { "answer": "None of the above" }
+      { "answer": "As a toy" },
+      { "answer": "Helps to clean dust" },
+      { "answer": "Helps to shine the way on the sea to sailors"},
+      { "answer": "Helps to navigate through the sea", "isCorrect": true }
     ]
   },
   {
-    "question": "Which class in Tailwind is used to set flex direction of column?",
+    "question": "How long were chinese swords?",
     "answerOptions": [
       { "answer": "col" },
       { "answer": "col-flex" },

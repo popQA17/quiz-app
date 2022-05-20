@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion"
 import Confetti from 'react-confetti'
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Home() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -12,6 +13,7 @@ export default function Home() {
   const router = useRouter()
   const [confettirecylce, setconfettirecylce] = useState(true)
   const [showScore, setShowScore] = useState(false);
+  const [page, setpage] = useState('')
   const [questionAnimate, setQuestionAnimate] = useState(false)
   const handleAnswerOption = (answer) => {
     setSelectedOptions([
@@ -98,8 +100,16 @@ export default function Home() {
     hidden: { opacity: 0, y: 200 },
     show: { opacity: 1, y: 0 }
   }
+  useEffect(()=>{
+    if (!router.isReady) return;
+    if(router.query.token != 'projACEaffilate'){
+      window.location.href='https://ace.popplays.tk'
+    }
+  }, [router.isReady])
   return (
-    <div className={`overflow-hidden transition-all flex ${showScore ? 'bg-indigo-800' : 'bg-[#1A1A1A] '} flex-col w-screen px-5 h-screen lg:justify-center items-center`}>
+    <>
+
+<div className={`overflow-hidden transition-all flex ${showScore ? 'bg-indigo-800' : 'bg-[#1A1A1A] '} flex-col w-screen px-5 h-screen lg:justify-center items-center`}>
       <Head>
         <title>Ancient China</title>
       </Head>
@@ -194,6 +204,7 @@ export default function Home() {
           </motion.div>
         </>
       )}
-    </div>
+    </div>    
+    </>
   );
 }
