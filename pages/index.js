@@ -10,6 +10,7 @@ export default function Home() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [score, setScore] = useState(0);
+  const [cheating, setcheating] = useState(false)
   const router = useRouter()
   const [confettirecylce, setconfettirecylce] = useState(true)
   const [showScore, setShowScore] = useState(false);
@@ -99,6 +100,18 @@ export default function Home() {
     hidden: { opacity: 0, y: 200 },
     show: { opacity: 1, y: 0 }
   }
+  const onBlur = () =>{
+    if (showScore == false){
+      setcheating(true)
+      setShowScore(true)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("blur", onBlur);
+    return () => {
+        window.removeEventListener("blur", onBlur);
+    };
+  }, []);
   return (
     <>
 
@@ -106,8 +119,21 @@ export default function Home() {
       <Head>
         <title>Ancient China</title>
       </Head>
-      {showScore ? (
-        <>
+      {showScore ? 
+        cheating ? (
+          <>
+          <div className='mb-12 flex justify-center flex-col items-center'>
+            <h1 className='text-8xl my-8'>
+              😭
+            </h1>
+            <h1 className='text-white text-5xl font-semibold'>Why did you do this...</h1>
+          </div>
+          <h1 className="text-2xl font-semibold text-center text-white">
+            <div className='flex items-center'>I'm disappointed in you... cheating is bad. but i'll give you a chance to retry the quiz.</div>
+          </h1>
+          <button onClick={()=> window.location.reload()} className='mt-8 rounded-lg bg-gray-700 px-4 py-3 text-white text-lg w-96'>Retry (without cheating this time)</button>
+        </>
+        ): <>
           {score / questions.length * 100 >= 75 && 
             <Confetti
             recycle={confettirecylce}
@@ -124,7 +150,7 @@ export default function Home() {
           </h1>
           <button onClick={()=> router.push('/answers')} className='mt-8 rounded-lg bg-gray-700 px-4 py-3 text-white text-lg w-96'>View Answers</button>
         </>
-      ) : (
+      : (
         <>
           <div className="flex flex-col items-start w-full">
             <h4 className="mt-10 text-xl text-white/60">
