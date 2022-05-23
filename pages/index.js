@@ -131,7 +131,9 @@ export default function Home() {
           <h1 className="text-2xl font-semibold text-center text-white">
             <div className='flex items-center'>I'm disappointed in you... cheating is bad. but i'll give you a chance to retry the quiz.</div>
           </h1>
-          <button onClick={()=> window.location.reload()} className='mt-8 rounded-lg bg-gray-700 px-4 py-3 text-white text-lg w-96'>Retry (without cheating this time)</button>
+
+          <button onClick={()=> window.location.href = 'https://ace.popplays.tk'} className='mt-8 rounded-lg bg-gray-700 px-4 py-3 text-white text-lg w-96'>Return</button>
+          <button onClick={()=> window.location.reload()} className='mt-2 rounded-lg bg-gray-700 px-4 py-3 text-white text-lg w-96'>Retry (without cheating this time)</button>
         </>
         ): <>
           {score / questions.length * 100 >= 75 && 
@@ -148,7 +150,8 @@ export default function Home() {
           <h1 className="text-3xl font-semibold text-center text-white">
             <div className='flex items-center'>Total Score: <span className={`mx-4 text-4xl ${score / questions.length * 100 >= 75 ? 'text-green-500': score / questions.length * 100 >= 50 ? 'text-yellow-500' : 'text-red-500' }`}>{score}</span> / <span className='ml-3'>{questions.length}</span></div>
           </h1>
-          <button onClick={()=> router.push('/answers')} className='mt-8 rounded-lg bg-gray-700 px-4 py-3 text-white text-lg w-96'>View Answers</button>
+          <button onClick={()=> window.location.href = 'https://ace.popplays.tk'} className='mt-8 rounded-lg bg-gray-700 px-4 py-3 text-white text-lg w-96'>Return</button>
+          <button onClick={()=> router.push('/answers')} className='mt-2 rounded-lg bg-gray-700 px-4 py-3 text-white text-lg w-96'>View Answers</button>
         </>
       : (
         <>

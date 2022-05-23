@@ -70,5 +70,5 @@
       { "answer": "12"},
       { "answer": "13", "isCorrect": true}
     ]
-  },
+  }
 ]
