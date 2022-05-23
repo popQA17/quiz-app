@@ -38,10 +38,37 @@
   {
     "question": "How long were chinese swords?",
     "answerOptions": [
-      { "answer": "col" },
-      { "answer": "col-flex" },
-      { "answer": "flex-col", "isCorrect": true },
-      { "answer": "None of the above" }
+      { "answer": "60cm" },
+      { "answer": "111cm" },
+      { "answer": "88cm", "isCorrect": true },
+      { "answer": "79cm", "isCorrect": true }
     ]
-  }
+  },
+  {
+    "question": "What is the Great wall of China used for?",
+    "answerOptions": [
+      { "answer": "The Great wall of China is a scenic route now", "isCorrect": true },
+      { "answer": "The Great wall of China can be visited by citizens", "isCorrect": true },
+      { "answer": "The Great wall of China can be visited by you", "isCorrect": true },
+      { "answer": "The Great wall of Chile is publicly open to visitors" }
+    ]
+  },
+  {
+    "question": "What can Feng Shui help you in?",
+    "answerOptions": [
+      { "answer": "Finding the way out of unknown tunnel"},
+      { "answer": "For nice decoration on your plain wall"},
+      { "answer": "To give you good wealth", "isCorrect": true },
+      { "answer": "Find limited edition pokemon card" }
+    ]
+  },
+  {
+    "question": "How many dynasties were listed on the site?",
+    "answerOptions": [
+      { "answer": "10"},
+      { "answer": "11"},
+      { "answer": "12"},
+      { "answer": "13", "isCorrect": true}
+    ]
+  },
 ]
